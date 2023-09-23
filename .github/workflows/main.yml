@@ -17,6 +17,10 @@ jobs:
     
     steps:
     - uses: actions/checkout@v3
+    - name: set up Python ${{ matrix.python-version }} 
+        uses: actions/setup-python@v3
+        with:
+          python-version: ${{ matrix.python-version }} 
     # - name: Install build dependencies
     #   run: sudo apt-get install -y build-essential gcc
     - name: Install packages
